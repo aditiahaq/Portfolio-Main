@@ -222,10 +222,14 @@
             item.onclick = function(){
                 modal.style.display = "block";
                 modalImg.src = this.src;
-            }
-        });
+                }
+              }
+            );
 
-
+        var span = document.getElementsByClassName("close-button")[0];
+        span.onclick = function() { 
+            modal.style.display = "none";
+        }
         
         window.onclick = function(event) {
             if (event.target === modal) {
